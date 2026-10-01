@@ -1,0 +1,12 @@
+{
+  "name": "workers-dynamic-worker-typescript",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.jsonc",
+    "types": "wrangler types --config wrangler.jsonc",
+    "check": "npm run types && tsc --noEmit && wrangler deploy --dry-run --config wrangler.jsonc",
+    "deploy": "wrangler deploy --config wrangler.jsonc"
+  },
+  "devDependencies": { "typescript": "^5.7.2", "wrangler": "^4.145.0" }
+}
